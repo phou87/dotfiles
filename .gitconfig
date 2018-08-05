@@ -1,9 +1,5 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
-#	name = Paul Hou
-#	email = lostinthought87@gmail.com
-[user]
 	email = lostinthought87@gmail.com
 
 [alias]
