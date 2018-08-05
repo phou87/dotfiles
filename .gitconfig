@@ -1,0 +1,23 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = Paul Hou
+#	email = lostinthought87@gmail.com
+[user]
+	email = lostinthought87@gmail.com
+
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+    l = ! git lg -n25
+    log-me  = !UN=$(git config user.name)&& git log --author="\"$UN\"" --pretty=format:'%h %cd %s' --date=short
+    st = status
+    ds = diff --staged
+    co = checkout
+    br = branch -vv
+    amend = commit -a --amend
+    sync = ! git fetch && git rebase -i @{u}
+    create-pull-request = !sh -c 'stash pull-request $0 $@'
+    resync = ! git branch --set-upstream-to origin/master && git rebase -i origin/master
+[rerere]
+    enabled = true
+
